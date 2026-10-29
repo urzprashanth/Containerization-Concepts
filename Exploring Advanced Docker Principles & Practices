@@ -1,0 +1,24 @@
+Docker Basics:
+ it's an open platform. its a tool for developing, deploying and running applications
+
+Docker Engine is the open source containerization technology used for building and containrizing applications,
+Docker Engine acts as client-server applications. its madeup of a server which has long running daemon process called 'docker d'.
+
+
+Docker Basic Terms:
+  - Docker Daemon
+  - Docker client
+  - Docker registries (public & private)
+  - Docker objects:
+       * Containers
+         - Images
+       * Volumes
+       * Networks
+       * Swarms
+
+AI Notes:
+• Docker is an open platform for developing, deploying, and running applications using containerization.
+• It separates applications from infrastructure to speed up software delivery and simplify management.
+• Key Docker components include the Docker Engine (daemon, API, CLI), images, containers, volumes, networks, and registries.
+• Containers package applications with dependencies for consistent environments and isolation.
+• Docker Swarm manages clusters of Docker hosts to maintain desired service states and ensure availability.
