@@ -1,9 +1,8 @@
-Docker Basics:
- it's an open platform. its a tool for developing, deploying and running applications
+DOCKER BASICS:
 
-Docker Engine is the open source containerization technology used for building and containrizing applications,
-Docker Engine acts as client-server applications. its madeup of a server which has long running daemon process called 'docker d'.
-
+-it's an open platform. its a tool for developing, deploying and running applications
+-Docker Engine is the open source containerization technology used for building and containrizing applications,
+-Docker Engine acts as client-server applications. its madeup of a server which has long running daemon process called 'docker d'.
 
 Docker Basic Terms:
   - Docker Daemon
@@ -22,3 +21,12 @@ AI Notes:
 • Key Docker components include the Docker Engine (daemon, API, CLI), images, containers, volumes, networks, and registries.
 • Containers package applications with dependencies for consistent environments and isolation.
 • Docker Swarm manages clusters of Docker hosts to maintain desired service states and ensure availability.
+
+
+
+MISCONCEPTIONS ABOUT DOCKER:
+• Docker is not a lightweight virtual machine but an evolution of Linux containers.
+• Containers share the host OS kernel, making them lightweight and fast to start compared to VMs.
+• Docker does not inherently improve app scalability or security; these depend on your code and practices.
+• Docker can run on-premise or in the cloud; it is not cloud-dependent.
+• Being open source, Docker benefits from a global community, enhancing reliability and innovation.
