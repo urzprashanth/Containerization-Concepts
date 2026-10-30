@@ -77,3 +77,25 @@ SERVICE DELINEATION DESIGN PATTERNS (Delimitation of services):
 • Strangler pattern incrementally replaces legacy systems by routing features to new services.
 • Aggregator pattern consolidates multiple service calls into one response to reduce client complexity.
 • Each microservice should have its own private database accessed only via its API for loose coupling and scalability.
+
+TESTING AND MONITRING DESIGN PATTERNS:
+• Effective Docker testing requires fast, meaningful, and reliable tests that boost developer productivity.
+• Testing strategies include naive CI-based builds, app & test combined images, and test-aware container approaches to balance portability and image size.
+• Real-time Docker monitoring is essential for performance, early issue detection, and resource optimization.
+• Monitoring challenges include data fragmentation, slow queries, and churn from container lifecycle changes.
+• Popular Docker monitoring tools are Sematext, Dynatrace, Datadog, and Elasticsearch with Kibana for logs.
+
+DOCKER CONTINUOUS INTEGRATION STRATEGIES:
+• Use continuous integration (CI) to automate Docker image builds and testing.
+• Avoid building production Docker images on developer machines.
+• CI process includes committing code, detecting changes, building images, testing, and pushing to a repository.
+• Key CI considerations: Docker Engine version compatibility, Docker cache usage and clearing, and support for parallel jobs.
+• Jenkins Docker plugin enables dynamic provisioning of containers as build agents without requiring build awareness of Docker.
+• Running Jenkins inside a Docker container requires sudo privileges, mapping Docker socket and binary, and configuring build steps to run Docker commands.
+
+MULTI-DOCKER BEST PRACTICES:
+• Use multistage builds to minimize image size and improve performance.
+• Avoid running containers as root; use least privileged users instead.
+• Sign and verify Docker images to ensure authenticity and security.
+• Use stable base images and unique tags for consistency and easy scaling.
+• Store sensitive data with Docker secrets and nonsensitive configs outside containers.
