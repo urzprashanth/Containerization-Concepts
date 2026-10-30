@@ -1,0 +1,15 @@
+MULTIPLE DOCKER CONTAINERS:
+• Use multiple Docker containers to isolate tasks and maintain consistent environments.
+• Containers solve dependency conflicts and save setup time by packaging apps with their dependencies.
+• Containers are lightweight, fast, and allow running multiple isolated instances on one host.
+• Docker Compose orchestrates multiple containers for microservices that communicate independently.
+• Multiple Compose files enable environment-specific setups for staging, development, and production.
+
+DEFINE MULTIPLE DOCKER CONTAINERS:
+• Use a docker-compose.yml file to define and manage multiple Docker containers in one solution.
+• Containers run in isolation by default; configure networking to enable inter-container communication.
+• Each container should focus on a single responsibility for easier versioning, scalability, and maintenance.
+• Docker Compose reads docker-compose.yml and optional docker-compose.override.yml files to configure multi-container applications.
+• Deploy all containers together with one command using docker-compose up for consistent environments and simplified management.
+
+TWO DISTINCT DOCKERS IN THE SAME ENVIRONMENT:
