@@ -13,3 +13,45 @@ DEFINE MULTIPLE DOCKER CONTAINERS:
 • Deploy all containers together with one command using docker-compose up for consistent environments and simplified management.
 
 TWO DISTINCT DOCKERS IN THE SAME ENVIRONMENT:
+• Docker containers run in isolation but can communicate via networking.
+• Containers must be on the same Docker network to communicate.
+• Volumes provide persistent or shared data storage across containers.
+• Docker Compose manages multi-container apps using services, volumes, ports, and dependencies.
+• Use docker-compose.yml to define services and docker-compose up -d --build to start them.
+
+RUNNING TWO DISTINCT DOCKERS:
+• Clone and prepare a Node.js to-do app from Docker’s GitHub repository.
+• Create a Dockerfile using node:12-alpine, install dependencies, and set the app to run on src/index.js.
+• Build and run the Docker image, exposing port 3000 to access the app.
+• Create a Docker network to enable communication between containers.
+• Run a MySQL container on the network with environment variables for initialization.
+• Connect the app container to the MySQL container using network alias and environment variables.
+• Verify the app connects to MySQL and data persists across containers.
+
+PRINCIPLES OF USING TWO DOCKET CONTAINERS:
+• Containers ensure environment consistency, isolating dependencies for predictable deployment.
+• Use separate volumes for data in production and bind mounts during development.
+• Handle Linux signals properly in containers to manage process lifecycle and avoid zombies.
+• Package one app per container to maintain lifecycle alignment and maximize container benefits.
+• Keep images small, use common layers, and tag images effectively for efficient builds and deployments.
+• Minimize attack surface by removing unnecessary tools and avoid running containers as root.
+
+CONFIGURING AN APPLICATION RUNNING TWO DOCKERS:
+• Log into Azure via Docker and create a Docker context linked to an Azure container instance.
+• Use docker-compose to build and run a Python Flask app with Redis locally.
+• Push the Docker image to Docker Hub for Azure Container Instances (ACI) deployment.
+• Switch Docker context to Azure and deploy the app in the cloud using docker-compose up.
+• Access the running app via the provided IP, confirming frontend and backend containers communicate successfully.
+
+TWO DOCKERS IN TWO CLOUD ENVIRONMENTS:
+• Multi-cloud uses multiple cloud providers for flexibility and best service selection.
+• Benefits include agility, portability, faster application development, and innovation support.
+• Container clustering enhances scalability, resilience, and flexible updates.
+• Risks involve data volume limits, network performance, storage choices, security, and cost.
+• Key infrastructure factors: container engine support, network and storage integration, orchestration tools like Kubernetes, and production readiness.
+
+CONFIGURING TWO DOCKERS IN TWO CLOUD ENVIRONMENTS:
+• Deployed a Python Flask app with Redis backend split across two clouds: frontend on AWS ECS and backend on Azure.
+• Used Docker contexts to manage deployments to Azure (ACI) and AWS (ECS).
+• Deployed Redis backend first on Azure, retrieved its IP, updated frontend config, then built and pushed frontend image to Docker Hub.
+• Deployed frontend container to AWS ECS using Docker Compose, enabling cross-cloud communication between containers.
