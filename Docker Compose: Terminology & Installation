@@ -1,0 +1,43 @@
+DOCKER FEATURES:
+• Docker is an open source platform for containerization that packages applications with all dependencies into standardized containers.
+• Containers share the host OS, making them more resource-efficient than virtual machines that require separate OS instances.
+• Docker enables rapid, consistent application delivery, portability across environments, and easy scaling.
+• Containers are lightweight, fast, and ideal for continuous integration and deployment, supporting Agile and DevOps workflows.
+• Docker simplifies development by isolating code in portable containers, facilitating updates and team collaboration.
+
+DOCKER COMPONENTS:
+• Docker uses a shared OS with a lightweight engine, unlike heavy VMs with separate OSes.
+• The Docker engine has three parts: the daemon (dockerd), REST API, and CLI for managing containers and images.
+• Docker client communicates with the daemon to execute commands and can connect to multiple daemons.
+• Docker registries store images; Docker Hub is the default public registry, but private registries can be used.
+• Key Docker objects include images, containers, volumes, and networks, each serving specific roles in container management.
+
+DOCKER COMPOSE:
+• Docker Compose manages multi-container Docker applications using a single YAML file.
+• It links and configures app services like databases and caches for isolated environments.
+• The process involves defining the environment with a Dockerfile, services in docker-compose.yaml, then running docker-compose up.
+• Compose supports multiple isolated environments on one host using project names.
+• It preserves volume data, caches container configurations, and supports variables for environment customization.
+
+DOCKER COMPOSE ENVIRONMENTS:
+• Configure Docker Compose for multiple environments using environment variables and multiple Compose files.
+• Keep configuration isolated from codebase to avoid security risks.
+• Use .env files with VAR=VAL syntax for default environment variables.
+• Docker Compose auto-merges docker-compose.yml and docker-compose.override.yml files for flexible setups.
+• Numerous Docker Compose environment variables control CLI behavior and container settings.
+
+DOCKER COMPOSE USE CASE:
+• Docker Compose supports multiple Compose files for different environments to customize app settings.
+• It is useful for development, testing, and single-host production deployments.
+• Compose files document and configure all app dependencies for easy setup and testing.
+• Automated testing environments can be created and destroyed quickly with Compose.
+• For production, adjust port bindings, set restart policies, include logging, and clean up volume bindings before deployment.
+
+UPGRADING DOCKER COMPOSE:
+• Docker Compose has three legacy file formats: version 1 (no version key), version 2 (version key '2.x'), and version 3 (version key '3.x').
+• The latest Compose file format follows the Compose specification on GitHub.
+• Consider if upgrading is necessary, potential breakage, and support for older versions before upgrading.
+• Compose 1.3+ requires containers to have labels; old containers must be migrated or removed.
+• Compatibility mode (--compatibility flag) helps transition to version 3 by translating some deploy keys but is not recommended for production.
+• To preserve data volumes, use docker-compose migrate-to-labels; otherwise, remove containers with docker container rm.
+
