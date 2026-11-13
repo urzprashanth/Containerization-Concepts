@@ -1,0 +1,31 @@
+DOCKER COMPOSE FUNDAMENTALS:
+• Docker Compose manages multi-container applications using a YAML file.
+• It enables isolated environments on a single host, preserving volume data and only recreating changed containers.
+• Compose supports variables for environment portability and orchestrates container communication.
+• It is ideal for development, testing, CI workflows, and staging by automating environment setup and teardown with simple commands.
+
+DOCKER COMPOSE BEST PRACTICES:
+• Use Docker Compose to efficiently orchestrate multiple containers serving a common purpose.
+• Avoid repeating service options by creating reusable YAML templates.
+• Include an init process in containers to prevent zombie processes.
+• Manage container networking via service names or assigned IPs.
+• Update containers on the fly with docker-compose up -d and force rebuilds with --build.
+• Use a single Compose file for all environments and explicitly version images.
+• Keep Compose files version-controlled alongside the app without secrets.
+• Maintain consistent ports and environment variables centrally.
+• Define named volumes at the top of the Compose file for flexibility.
+• Use clear naming conventions for traceability and ensure accurate exit codes for troubleshooting.
+
+DOCKER COMPOSE PROJECTS:
+• Define your Docker Compose project by creating a Docker file and identifying dependencies.
+• Build the project to download and install all necessary libraries and dependencies.
+• Run the project and connect required services for proper application function.
+• Use docker-compose.yml to configure services, volumes, and environment variables.
+• Use docker-compose up -d to start containers in detached mode and docker-compose down to stop and clean up containers and networks.
+
+DOCKER COMPOSE CLI:
+• Docker CLI is a command line tool to interact with the Docker daemon via its REST API.
+• Docker Compose is an additional CLI tool that simplifies working with Docker commands.
+• The docker-compose command supports flags like -f for specifying compose files and -p for project names.
+• Multiple compose files can be combined, with later files overriding earlier ones.
+• Environment variables can also configure compose file locations and project names.
